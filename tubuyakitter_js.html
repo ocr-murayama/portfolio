@@ -1,0 +1,82 @@
+<!-- https://github.com/ocr-murayama/portfolio.git -->
+
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>tubuyakitter_js</title>
+	<link rel="stylesheet" href="css/sns.css">
+	<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+</head>
+<body>
+<div id="sns">
+	
+	<div class="modal" v-show="show">
+	<div class="modal_bg"></div>
+		<form class="tweet_form">
+			<!-- 入力エリア -->
+			<input type="text" v-model="user_name" placeholder="ユーザー名">
+			<input type="text" v-model="user_id" placeholder="ユーザーID">
+			<input type="text" v-model="tweet_text" placeholder="ツイート内容">
+			<button type="button" @click="submit">つぶやく</button>
+			<div class="close_modal" @click="show = !show">
+				<i class="fas fa-times icon_center"></i>
+			</div>
+		</form>
+	</div>
+
+	<!-- ＴＬ全体 -->
+	<div class="time_line_box">
+	<!-- ロゴ部分 -->
+		<div class="tl_header">
+			<i class="fab fa-twitter icon_center"></i>
+		</div>
+	<!-- ツイート追加ボタン -->
+		<div class="add_tweet" @click="show = !show">
+			<i class="fas fa-pen icon_center"></i>
+		</div>
+<!-- ここからＴＬエリア記事 -->	
+	<div class="tweet_box" v-for="tw_text,index in tweet_list">
+
+				<!-- アイコン -->
+				<figure>
+					<img class="icon" src="img/shinjuku.jpg">
+				</figure>
+
+				<!-- ツイート -->
+				<div class="tweet_area">
+
+					<!-- 表示名@ID,タイムスタンプ -->
+					<div class="user_info">
+						<p class="user_name">{{tw_text.name}}
+							<span class="user_id">＠{{tw_text.id}}</span></p>
+						<p class="time">{{tw_text.time}}</p>
+					</div>
+
+					<!-- ツイート本文 -->
+					<div class="tweet_text">
+						<p class="main_text">
+							{{tw_text.text}}
+						</p>
+					</div>
+
+					<!--下部アイコン群 -->
+					<div class="tweet_footer">
+						<i class="footer_icon far fa-comment"></i>
+						<i class="footer_icon fas fa-retweet"></i>
+						<i class="footer_icon far fa-heart"></i>
+						<i class="footer_icon fas fa-external-link-alt"></i>
+					</div>
+				</div>
+	</div>
+<!-- ここまで -->
+	</div>
+</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+	<script src="js/sns.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>

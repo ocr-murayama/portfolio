@@ -1,0 +1,170 @@
+*{
+	margin: 0;
+	padding: 0;
+	object-fit: cover;
+	font-size: 62.5%;
+}
+
+.modal_bg{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #33333399;
+	width: 100%;
+	height: 110vh;
+	z-index: 1;
+}
+.add_tweet,
+.close_modal{
+	width: 7rem;
+	height: 7rem;
+	background-color: skyblue;
+	border-radius: 100%;
+	cursor: pointer;
+}
+
+.add_tweet{
+	position: absolute;
+    top: 49rem;
+    right: 25%;
+	margin: 1rem;
+	margin-left: auto;
+	margin-right: 1rem; 
+}
+
+.close_modal{
+	position: absolute;
+	top: -3rem;
+	right: -3rem;
+}
+
+.tweet_form{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	background-color: #fff;
+	width: 35rem;
+	font-size: 2.3rem;
+	text-align: center;
+	padding: 2rem;
+}
+
+.fa-pen,
+.fa-times{
+	font-size: 3rem;
+	color: #fff;
+}
+
+.tweet_form input{
+	width: 14rem;
+	height: 2rem;	
+}
+
+form input:nth-of-type(3){
+	width:29rem;
+	height: 7rem;
+}
+
+.time_line_box{
+	width: 40rem;
+	height: 55rem;
+	margin:2rem auto;
+	overflow-y: scroll;
+	border: solid 0.1rem #ccc;
+}
+
+.icon_center{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translateY(-50%) translateX(-50%);
+	   -moz-transform: translateY(-50%) translateX(-50%);
+	    -ms-transform: translateY(-50%) translateX(-50%);
+	     -o-transform: translateY(-50%) translateX(-50%);
+	        transform: translateY(-50%) translateX(-50%);
+}
+
+.tl_header{
+	position: relative;
+	height: 4.5rem;
+	background-color: skyblue;
+}
+
+.fa-twitter{
+	font-size: 3.3rem;
+	color :#fff;
+}
+
+.tweet_box{
+	display: flex;	
+	border-bottom: solid 0.1rem #ccc;
+}
+
+.icon{
+	display: inline-block;
+	width: 10rem;
+	height: 10rem;
+	border-radius: 50%;
+	padding: 0.8rem;
+}
+
+.tweet_area{
+	position: relative;
+	padding: 0.5rem;
+	word-break: break-all;
+}
+
+.user_info{
+	display: flex;
+}
+
+.user_name{
+	max-width: 14.5rem;
+	font-size: 1.3rem;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.user_id,.time{
+	color: #848484;
+}
+
+.time{
+	display: inline-block;
+	margin-left: auto;
+	margin-right: 0.3rem;
+	white-space: nowrap;
+}
+
+.tweet_text{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1.5rem;
+}
+
+.main_text{
+	min-width: 24.3rem;
+	font-size: 1.5rem;
+	padding-bottom: 1rem;
+}
+
+.tweet_img{
+	width: 25rem;
+	height: 25rem;
+	border-radius: 5%;
+}
+
+.tweet_footer{
+	position: absolute;
+	bottom: 0;
+}
+
+.footer_icon{
+	font-size: 1.7rem;
+	margin-right: 4rem;
+	margin-bottom: 1rem;
+}
