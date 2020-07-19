@@ -168,3 +168,32 @@ form input:nth-of-type(3){
 	margin-right: 4rem;
 	margin-bottom: 1rem;
 }
+
+@media screen and (max-width: 476px){
+	*{
+		font-size: 52.5%;
+	}
+	.tweet_form{
+	top: 25%;
+	font-size: 3.3rem;
+	}
+	.tweet_form input {
+    width: 20rem;
+    height: 4rem;
+    margin: 1rem;
+	}
+	.tweet_form button{
+	width: 15rem;
+    height: 5rem;
+	}
+	.add_tweet{
+		right: 3%;
+	}
+}
+
+/*iPhone SE*/
+@media screen and (max-width: 320px){
+	*{
+		font-size: 42.5%;
+	}	
+}
